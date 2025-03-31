@@ -1,0 +1,71 @@
+*1. فایل‌های HTML
+*index.html
+
+*profile.php
+
+*public_profile.php
+
+*dashboard.php
+
+*game.php
+
+*chat.php
+
+*login.php
+
+*register.php
+
+*leaderboard.php
+
+*logout.php
+
+*2. فایل‌های PHP
+*php/config.php
+
+*php/save_score.php
+
+*php/top_scores.php
+
+*php/add_reaction.php
+
+*php/get_messages.php
+
+*php/get_online_users.php
+
+*php/update_online_status.php
+
+*php/profile_update.php
+
+*php/save_theme.php
+
+*3. فایل‌های CSS و JavaScript
+*style.css
+
+*script.js
+
+*manifest.json
+
+*sw.js
+
+*4. آیکون‌ها و آواتارها
+*avatars/
+
+*avatar1.png تا avatar8.png
+
+*assets/icons/
+
+*icon-192.png
+
+*icon-512.png
+
+*5. دیتابیس
+
+*db.sql
+
+*6. htaccess
+
+*.htaccess
+
+*7. git
+
+*README.md

@@ -1,0 +1,35 @@
+# فعال‌سازی mod_rewrite برای استفاده از URL های دوستانه
+RewriteEngine On
+
+# ریدایرکت به صفحه اصلی از هرگونه دسترسی به فایل index.php
+RewriteRule ^index\.php$ / [R=301,L]
+
+# ریدایرکت به صفحه ورود برای کاربرانی که وارد نشده‌اند
+RewriteCond %{REQUEST_URI} !^/login.php$
+RewriteCond %{REQUEST_URI} !^/register.php$
+RewriteRule ^.*$ /login.php [R=302,L]
+
+# جلوگیری از دسترسی به فایل‌های .htaccess
+<Files .htaccess>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# تنظیمات برای بارگذاری سریعتر فایل‌های استاتیک
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# جلوگیری از دسترسی به فایل‌های PHP در پوشه‌های خاص
+<Directory "/path/to/protected/folder">
+    <Files "*.php">
+        Order Deny,Allow
+        Deny from all
+    </Files>
+</Directory>
